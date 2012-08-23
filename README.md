@@ -20,14 +20,22 @@ should use RESTful API calls to make their requests.
 
 For those of you wishing to actually install and run this program 
 locally, this program is a standard Python app. It is highly recommended 
-that you use `virtualenv` to manage the installation, create a virtual
-environment and, from there, just run
+that you use `virtualenv` to manage the installation.
 
-    pip install -r requirements.txt
+To make things easy, a Makefile is included to setup an appropriate
+`virtualenv` for you.
 
-to install the dependencies.
+For it to work, run:
 
-To run the web application, simply run `app.py` with Python, or as a WSGI
+ * Debian/Ubuntu: `sudo aptitude install python-dev python-virtualenv python-pip`
+
+and then run:
+
+    make
+
+This will setup `virtualenv` in 'venv', install dependencies, and start changemonger for you.
+
+To run the web application manually, simply run `app.py` with Python, or as a WSGI
 application under your web server of choice.
 
 
